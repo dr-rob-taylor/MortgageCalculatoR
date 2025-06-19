@@ -9,7 +9,9 @@ License: MIT + file LICENSE
 URL: https://github.com/dr-rob-taylor/MortgageCalculatoR.git
 BugReports: https://github.com/dr-rob-taylor/MortgageCalculatoR.git/issues
 Imports: 
+    bslib,
     config,
+    DT,
     ggplot2,
     golem,
     shiny
