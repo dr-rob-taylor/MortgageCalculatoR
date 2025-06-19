@@ -18,10 +18,17 @@
 ## install.packages('attachment') # if needed.
 attachment::att_amend_desc()
 
+# Adding dependencies
+usethis::use_package("ggplot2")
+usethis::use_package("dplyr")
+usethis::use_package("lubridate")
+
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "name_of_module1", with_test = TRUE) # Name of the module
-golem::add_module(name = "name_of_module2", with_test = TRUE) # Name of the module
+golem::add_module(name = "inputs", with_test = TRUE)        # Handles user input
+golem::add_module(name = "results", with_test = TRUE)       # Displays calculated outputs
+golem::add_module(name = "schedule", with_test = TRUE)      # Shows amortization table
+golem::add_module(name = "plot", with_test = TRUE)          # Visualizes loan info
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
@@ -43,6 +50,7 @@ usethis::use_data_raw(name = "my_dataset", open = FALSE)
 ## Tests ----
 ## Add one line by test you want to create
 usethis::use_test("app")
+usethis::use_test("calc_mortgage")
 
 # Documentation
 
