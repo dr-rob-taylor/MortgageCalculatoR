@@ -18,7 +18,7 @@
 ## install.packages('attachment') # if needed.
 attachment::att_amend_desc()
 
-# Adding dependencies
+# Adding dependencies for app
 usethis::use_package("ggplot2")
 usethis::use_package("dplyr")
 usethis::use_package("lubridate")
